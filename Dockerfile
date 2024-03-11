@@ -21,6 +21,6 @@ RUN pip install -r requirements.txt
 # copy the app files
 COPY . .
 
-# CMD ["python", "app.py"]
-CMD exec gunicorn --bind :$PORT --workers 3 --threads 8 --timeout 0 wrapper:app
+CMD ["python", "app.py"]
+#CMD exec gunicorn --bind :$PORT --workers 3 --threads 8 --timeout 0 wrapper:app
 
